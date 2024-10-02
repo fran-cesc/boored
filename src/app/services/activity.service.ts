@@ -16,11 +16,13 @@ export class ActivityService {
   constructor() { }
 
   getRandomActivity(): Observable<Activity>{
-    return this.http.get<Activity>(`${this.API_PROXY_URL}/random`);
+    // return this.http.get<Activity>(`${this.API_PROXY_URL}/random`);
+    return this.http.get<Activity>(`${this.API_URL}/random`);
   }
 
   getActivityListByType(type: string){
-    return this.http.get<Activity[]>(`${this.API_PROXY_URL}/filter?type=${type}`);
+    // return this.http.get<Activity[]>(`${this.API_PROXY_URL}/filter?type=${type}`);
+    return this.http.get<Activity[]>(`${this.API_URL}/filter?type=${type}`);
   }
 
 }
