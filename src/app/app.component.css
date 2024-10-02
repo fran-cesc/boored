@@ -1,0 +1,64 @@
+.logo{
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo__logo{
+
+}
+
+.title-text{
+  color: #51ABB5;
+}
+
+.buttons{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.buttons__button{
+}
+
+.button__btn{
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  color: #8D51B5;
+  background-color:white;
+  border: 1px solid #8D51B5;
+}
+
+.imgage{
+
+}
+
+.image__img{
+
+}
+
+.output{
+
+}
+
+.output__title{
+
+}
+
+.output__btn{
+
+}
+
+.output__text{
+
+}
+
+.output__activity{
+
+}
+
+.active{
+  background-color: #8D51B5;
+  color: white;
+}
