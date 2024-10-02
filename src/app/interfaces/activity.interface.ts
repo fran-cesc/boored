@@ -11,7 +11,7 @@ export interface Activity {
   key:           string;
 }
 
-export interface langActivity{
+export interface ActivityByLang{
   eng: string,
   cat: string
 }

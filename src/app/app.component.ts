@@ -2,7 +2,7 @@ import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { ActivityService } from './services/activity.service';
-import { Activity, langActivity } from './interfaces/activity.interface';
+import { Activity, ActivityByLang } from './interfaces/activity.interface';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +12,8 @@ import { Activity, langActivity } from './interfaces/activity.interface';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'boored';
 
-  // public buttonList: string[] = ['social', 'education', 'charity', 'cooking', 'relaxation', 'busywork', 'recreational', 'random'];
-  // public catButtonList: string[] = ['Social', 'Educació', 'Caritat', 'Cuina', 'Relax', 'Treball actiu', 'Recreatiu', 'Tant me fa'];
-  public langButtonList: langActivity[] = [
+  public langButtonList: ActivityByLang[] = [
         { eng: 'social', cat: 'Social'},
         { eng: 'charity', cat: 'Caritat'},
         { eng: 'cooking', cat: 'Cuina'},
@@ -68,7 +65,6 @@ export class AppComponent {
   getActivityType(event: Event) {
     this.activityType = (event.target as HTMLElement).id;
     this.activeButtonId = this.activityType;
-    console.log(this.activeButtonId);
   }
 
   getRandomNumber(max: number) {
