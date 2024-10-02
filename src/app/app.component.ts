@@ -52,7 +52,6 @@ export class AppComponent {
         .subscribe({
           next: (response) => {
             const randomNumber = this.getRandomNumber(response.length);
-            console.log(randomNumber);
             this.currentActivity = response[randomNumber].activity;
           },
           error: (error) => {
