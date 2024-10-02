@@ -1,27 +1,56 @@
 # Boored
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.6.
+Prova Frontend d'accés a la Hackató & Marketplace Barcelona 2024
 
-## Development server
+## Descripció
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Aplicació que mostra activitats per a realitzar en moments d'avorriment segons les dades que proporciona la API: [Bored API](https://bored-api.appbrewery.com/) 
 
-## Code scaffolding
+## Començant
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Tecnologies
 
-## Build
+- Angular version 17.0.0
+- Typescript
+- HTML5
+- CSS3
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Requeriments
 
-## Running unit tests
+- Node.js i npm instal·lats al sistema. Els pots obtenir a [nodejs.org](https://nodejs.org/).
+- Instal·lació global d' Angular CLI:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+npm install -g @angular/cli
+```
 
-## Running end-to-end tests
+### Instal·lació
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
 
-## Further help
+Clona el repositori:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+git clone https://github.com/fran-cesc/boored
+```
+
+### Execució
+
+1- Accedeix a la carpeta /boored:
+```
+cd boored
+```
+
+2- instala les dependències:
+```
+npm install
+```
+3- Executa:
+```
+ng serve
+```
+
+
+## Demo
+
+
+* [Boored](https://github.com/)

@@ -1,30 +1,31 @@
-<div>
-    <div class="logo">
-        <img class="logo__logo" src="../assets/img/logo.png" alt="logo" />
+<div class="logo">
+    <img class="logo__logo" src="../assets/img/logo.png" alt="logo" />
+</div>
+
+<div class="body-container">
+
+    <div class="body">
+        <div class="body__title-text">
+            <h3>M'agradaria fer alguna cosa relacionada amb: </h3>
+        </div>
+        <nav class="body__buttons">
+            @for (button of langButtonList; track i; let i = $index){
+                    <button type="button" class="buttons__btn" id="{{button.eng}}"
+                    [class.active]="activeButtonId === button.eng "
+                    (click)="getActivityType($event)">{{button.cat}}</button>
+            }
+        </nav>
+        <div class="body__image">
+            <img class="image__img" src="../assets/img/ninu.jpg" alt="ninu" />
+        </div>
+        <div class="body__central">
+            <h2 class="central__title">TROBA ALGUNA<br>COSA A FER:</h2>
+            <button type="button" class="central__btn" id="random" (click)="onClick($event)">Som-hi!</button>
+        </div>
     </div>
 
-    <div class="title-text">
-        <h3>M'agradaria fer alguna cosa relacionada amb: </h3>
-    </div>
-
-    <nav class="buttons">
-        @for (button of langButtonList; track i; let i = $index){
-            <div class="buttons__button">
-                <button type="button" class="button__btn" id="{{button.eng}}"
-                [class.active]="activeButtonId === button.eng "
-                (click)="getActivityType($event)">{{button.cat}}</button>
-            </div>
-        }
-    </nav>
-
-    <div class="imgage">
-        <img class="image__img" src="../assets/img/ninu.jpg" alt="ninu" />
-    </div>
-
-    <div class="output">
-        <h2 class="output__title">TROBA ALGUNA COSA A FER</h2>
-        <button type="button" class="output__btn" id="random" (click)="onClick($event)">Som-hi</button>
-        <h2 class="output__text">Activitat proposada: </h2>
-        <p class="output__activity">{{this.currentActivity}}</p>
+    <div class="footer">
+      <h2 class="footer__text">Activitat proposada: </h2>
+      <div class="footer__activity">{{this.currentActivity}}</div>
     </div>
 </div>

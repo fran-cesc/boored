@@ -1,64 +1,106 @@
-.logo{
-  text-align: center;
+.logo {
+  text-align: start;
   margin-top: 20px;
+  margin-left: 20px;
 }
 
-.logo__logo{
-
+.body-container{
+  display:flex;
+  flex-direction: column;
 }
 
-.title-text{
-  color: #51ABB5;
+.body__title-text {
+  margin: auto;
+  text-align: center;
+  width: 70%;
 }
 
-.buttons{
+.body__buttons {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
+  width: 70%;
+  margin: auto;
 }
 
-.buttons__button{
-}
-
-.button__btn{
+.buttons__btn {
+  font-weight: bold;
   border: none;
   border-radius: 25px;
   padding: 10px 25px;
-  color: #8D51B5;
-  background-color:white;
-  border: 1px solid #8D51B5;
+  color: black;
+  background-color: #f0e9f5;
+  margin: 5px;
+  box-shadow: 3px 3px 11px -2px rgba(0, 0, 0, 0.5);
 }
 
-.imgage{
-
+.body__image {
+  margin-top: 30px;
+  text-align: center;
 }
 
-.image__img{
-
+.body__central {
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
 }
 
-.output{
-
+.central__title {
+  font-weight: bold;
+  margin-top: -10px;
 }
 
-.output__title{
-
-}
-
-.output__btn{
-
-}
-
-.output__text{
-
-}
-
-.output__activity{
-
-}
-
-.active{
-  background-color: #8D51B5;
+.central__btn {
+  font-weight: bold;
+  font-size: 1.1em;
+  border: none;
+  border-radius: 25px;
+  padding: 20px 40px;
   color: white;
+  background-color: black;
+  box-shadow: 3px 3px 11px -2px rgba(0, 0, 0, 0.5);
+}
+
+.footer {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.footer__activity {
+  color: #8d51b5;
+  font-weight: bold;
+  font-size: 1.3em;
+  width: 70%;
+  margin: auto;
+}
+
+.active {
+  background-color: #8d51b5;
+  color: white;
+}
+
+
+@media only screen and (min-width: 768px){
+
+  .body-container{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 1.2em
+  }
+
+  .footer__activity {
+    color: #8d51b5;
+    font-weight: bold;
+    margin: auto;
+  }
+
+  .body {
+    border-right: 1px dashed black;
+  }
+
 }
