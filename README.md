@@ -10,7 +10,7 @@ Aplicació que mostra activitats per a realitzar en moments d'avorriment segons 
 
 ### Tecnologies
 
-- Angular version 17.0.0
+- Angular versió 17.0.0
 - Typescript
 - HTML5
 - CSS3
