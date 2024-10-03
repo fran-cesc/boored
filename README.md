@@ -53,4 +53,4 @@ ng serve
 ## Demo
 
 
-* [Boored](https://github.com/)
+* [Boored](https://boored-hackato.vercel.app/)

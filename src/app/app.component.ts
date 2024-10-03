@@ -15,6 +15,7 @@ export class AppComponent {
 
   public langButtonList: ActivityByLang[] = [
         { eng: 'social', cat: 'Social'},
+        { eng: 'education', cat: 'Educació'},
         { eng: 'charity', cat: 'Caritat'},
         { eng: 'cooking', cat: 'Cuina'},
         { eng: 'relaxation', cat: 'Relax'},
@@ -24,19 +25,21 @@ export class AppComponent {
   ];
 
   public activityType: string = '';
+  public translatedActivityType: string = '';
   public currentActivity: string = '';
   public activityByTypeList: Activity[] = [];
   public activeButtonId: string | null = null;
+  private API_NOT_WORKING_TEXT: string = 'En aquests moments la API no pot proporcionar una activitat de tipus: ';
   private activityService = inject(ActivityService);
 
   constructor() {}
 
   onClick(event: Event) {
-
     if (this.activityType === '' || this.activityType === null || this.activityType == undefined){
       alert('Sietplau, selecciona algun tipus d\'activitat');
       return;
     }
+    this.translatedActivityType = this.translateActivity(this.activityType);
     if ((this.activityType === 'random')) {
       this.activityService.getRandomActivity().subscribe({
         next: (response) =>{
@@ -44,6 +47,7 @@ export class AppComponent {
         },
         error: (error) => {
           console.log('Error getting random activity: ', error);
+          this.currentActivity = (`${this.API_NOT_WORKING_TEXT}${this.translatedActivityType}`);
         }
       });
     } else {
@@ -56,6 +60,7 @@ export class AppComponent {
           },
           error: (error) => {
             console.log('Error getting typed activity: ', error);
+            this.currentActivity = (`${this.API_NOT_WORKING_TEXT}${this.translatedActivityType}`);
           }
           });
     }
@@ -74,4 +79,8 @@ export class AppComponent {
     this.activeButtonId = buttonId;
   }
 
+  translateActivity( activity: string ){
+    const findActivity = this.langButtonList.find( item => item.eng === activity);
+    return findActivity ? findActivity.cat : activity;
+  }
 }

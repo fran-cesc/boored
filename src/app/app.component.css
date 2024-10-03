@@ -93,14 +93,21 @@
     font-size: 1.2em
   }
 
-  .footer__activity {
-    color: #8d51b5;
-    font-weight: bold;
+  .body {
+    width: 50%;
+    border-right: 1px dashed black;
+  }
+
+  .footer {
+    width: 50%;
     margin: auto;
   }
 
-  .body {
-    border-right: 1px dashed black;
+  .footer__activity {
+    color: #8d51b5;
+    font-weight: bold;
+    /* margin: auto; */
   }
+
 
 }
